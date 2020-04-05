@@ -15,8 +15,11 @@ import {
 
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
-
+import axios from "axios";
 import PropTypes from "prop-types";
+
+const API_URL =
+  "'https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=ID";
 
 const brandPrimary = getStyle("--primary");
 const brandSuccess = getStyle("--success");
@@ -152,7 +155,27 @@ const mainChartOpts = {
 };
 
 class CovidChart extends Component {
-  state = {};
+  state = {
+    dataChartCovid: []
+  };
+
+  componentDidMount() {
+    axios
+      .get(API_URL)
+      .then(res => {
+        this.setState({
+          dataChartCovid: res
+        });
+        console.log(this.state.dataChartCovid);
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function() {
+        // always executed
+      });
+  }
   render() {
     return (
       <Row>
