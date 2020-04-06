@@ -25,6 +25,9 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import SummaryCovidCards from './Components/SummaryCovidCard';
 import CovidChart from './Components/CovidChart';
 import SummaryCovidWidget from './Components/SummaryCovidWidget';
+import SummaryCovidWidgetFull from './Components/SummaryCovidWidgetFull';
+import CovidTableGlobal from './Components/CovidTableGlobal';
+import CovidTableProvince from './Components/CovidTableProvince';
 
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
@@ -486,8 +489,17 @@ class Dashboard extends Component {
 
     return (
       <div className="animated fadeIn">
-        <SummaryCovidWidget />
+        
+        <SummaryCovidWidgetFull />
         <CovidChart />
+        <Row>
+          <Col xs="12" lg="6">
+            <CovidTableGlobal />
+          </Col>
+          <Col xs="12" lg="6">
+            <CovidTableProvince />
+          </Col>
+        </Row>
 
         <Row>
           <Col xs="6" sm="6" lg="3">
