@@ -31,7 +31,7 @@ class CovidTableGlobal extends Component {
         this.setState({
           dataCovidGlobal: res.data
         });
-        console.log("response Global", this.state.dataCovidGlobal);
+        //console.log("response Global", this.state.dataCovidGlobal);
       })
       .catch(function(error) {
         // handle error
@@ -45,14 +45,17 @@ class CovidTableGlobal extends Component {
     const { dataCovidGlobal, showItems } = this.state;
     return (
       <Card>
-        <CardHeader>Peringkat 5 Negara Teratas</CardHeader>
+        <CardHeader>
+          Peringkat 5 Teratas dari {dataCovidGlobal.length} Negara Terjangkit
+          Covid-19
+        </CardHeader>
         <CardBody>
           <Table responsive>
             <thead>
               <tr>
                 <th className="text-center">No.</th>
                 <th>Negara</th>
-                <th>Positif</th>
+                <th>Terinfeksi</th>
                 <th>Sembuh</th>
                 <th>Meninggal</th>
               </tr>

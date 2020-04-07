@@ -31,7 +31,7 @@ class CovidTableProvince extends Component {
         this.setState({
           dataCovidProvince: res.data
         });
-        console.log("response Province", this.state.dataCovidProvince);
+        //console.log("response Province", this.state.dataCovidProvince);
       })
       .catch(function(error) {
         // handle error
@@ -45,14 +45,17 @@ class CovidTableProvince extends Component {
     const { dataCovidProvince, showItems } = this.state;
     return (
       <Card>
-        <CardHeader>Peringkat 5 Provinsi Teratas</CardHeader>
+        <CardHeader>
+          Peringkat 5 Teratas dari {dataCovidProvince.length} Provinsi
+          Terjangkit Covid-19
+        </CardHeader>
         <CardBody>
           <Table responsive>
             <thead>
               <tr>
                 <th className="text-center">No.</th>
                 <th>Negara</th>
-                <th>Positif</th>
+                <th>Terinfeksi</th>
                 <th>Sembuh</th>
                 <th>Meninggal</th>
               </tr>
@@ -66,12 +69,12 @@ class CovidTableProvince extends Component {
                 )
                 .slice(0, showItems)
                 .map((item, index) => (
-                  <tr key={item.attributes.OBJECTID}>
+                  <tr key={item.attributes.FID}>
                     <td className="text-center">{index + 1}</td>
-                    <td>{item.attributes.Provinsi}</td>
-                    <td>{item.attributes.Kasus_Posi}</td>
-                    <td>{item.attributes.Kasus_Semb}</td>
-                    <td>{item.attributes.Kasus_Meni}</td>
+                    <td>{formatNumber(item.attributes.Provinsi)}</td>
+                    <td>{formatNumber(item.attributes.Kasus_Posi)}</td>
+                    <td>{formatNumber(item.attributes.Kasus_Semb)}</td>
+                    <td>{formatNumber(item.attributes.Kasus_Meni)}</td>
                   </tr>
                 ))}
             </tbody>
