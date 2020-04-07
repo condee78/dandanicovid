@@ -18,7 +18,7 @@ class SummaryCovidWidget extends Component {
         this.setState({
           dataCovid: res.data.countrydata[0]
         });
-        console.log(this.state.dataCovid);
+        //console.log(this.state.dataCovid);
       })
       .catch(function(error) {
         // handle error
