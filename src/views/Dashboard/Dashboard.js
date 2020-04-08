@@ -33,6 +33,7 @@ import CovidTableProvince from "./Components/CovidTableProvince";
 import CovidCallCenter from "./Components/CovidCallCenter";
 import WelcomeText from "./Components/WelcomeText";
 import CovidChart2 from "./Components/CovidChart2";
+import StayAtHomeProgram from "./Components/StayAtHomeProgram";
 
 const Widget03 = lazy(() => import("../../views/Widgets/Widget03"));
 
@@ -222,6 +223,7 @@ class Dashboard extends Component {
         <WelcomeText />
         <SummaryCovidWidgetFull />
         <CovidChart />
+        <StayAtHomeProgram />
         <Row>
           <Col xs="12" lg="6">
             <CovidTableGlobal />
