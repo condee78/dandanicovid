@@ -10,7 +10,7 @@ import {
   Button,
   ButtonGroup,
   ButtonToolbar,
-  Row
+  Row,
 } from "reactstrap";
 
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
@@ -39,48 +39,47 @@ const mainChartOpts = {
     mode: "index",
     position: "nearest",
     callbacks: {
-      labelColor: function(tooltipItem, chart) {
+      labelColor: function (tooltipItem, chart) {
         return {
           backgroundColor:
-            chart.data.datasets[tooltipItem.datasetIndex].borderColor
+            chart.data.datasets[tooltipItem.datasetIndex].borderColor,
         };
-      }
-    }
+      },
+    },
   },
   maintainAspectRatio: false,
   legend: {
-    display: false
+    display: false,
   },
   scales: {
     xAxes: [
       {
         gridLines: {
-          drawOnChartArea: false
-        }
-      }
+          drawOnChartArea: false,
+        },
+      },
     ],
     yAxes: [
       {
         ticks: {
-          beginAtZero: true,
+          beginAtZero: false,
           maxTicksLimit: 5,
           stepSize: Math.ceil(250 / 5),
-          max: 1000
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
   elements: {
     point: {
       radius: 0,
       hitRadius: 10,
       hoverRadius: 4,
-      hoverBorderWidth: 3
-    }
-  }
+      hoverBorderWidth: 3,
+    },
+  },
 };
 
-const formatDate = string => {
+const formatDate = (string) => {
   var options = { year: "numeric", month: "numeric", day: "numeric" };
   return new Date(string).toLocaleDateString([], options);
 };
@@ -94,7 +93,7 @@ class CovidChart extends Component {
     newRecovered: 0,
     totalDeaths: 0,
     newDeaths: 0,
-    totalDays: []
+    totalDays: [],
   };
 
   componentDidMount() {
@@ -139,20 +138,20 @@ class CovidChart extends Component {
       url: "https://api.smartable.ai/coronavirus/stats/ID",
       headers: {
         "content-type": "application/octet-stream",
-        "Subscription-Key": "3009d4ccc29e4808af1ccc25c69b4d5d"
+        "Subscription-Key": "3009d4ccc29e4808af1ccc25c69b4d5d",
       },
       params: {
-        country: "Indonesia"
-      }
+        country: "Indonesia",
+      },
     })
-      .then(res => {
+      .then((res) => {
         const resultData = res.data;
         let chartLabel = [];
         let chartValueConfirmed = [];
         let chartValueDeaths = [];
         let chartValueRecovered = [];
 
-        resultData.stats.history.forEach(element => {
+        resultData.stats.history.forEach((element) => {
           chartLabel.push(formatDate(element.date));
           chartValueConfirmed.push(element.confirmed);
           chartValueDeaths.push(element.deaths);
@@ -181,7 +180,7 @@ class CovidChart extends Component {
                 borderColor: brandDanger,
                 pointHoverBackgroundColor: "#fff",
                 borderWidth: 2,
-                data: chartValueConfirmed
+                data: chartValueConfirmed,
               },
               {
                 label: "Sembuh",
@@ -189,7 +188,7 @@ class CovidChart extends Component {
                 borderColor: brandSuccess,
                 pointHoverBackgroundColor: "#fff",
                 borderWidth: 2,
-                data: chartValueRecovered
+                data: chartValueRecovered,
               },
               {
                 label: "Meninggal",
@@ -198,15 +197,15 @@ class CovidChart extends Component {
                 pointHoverBackgroundColor: "#fff",
                 borderWidth: 1,
                 borderDash: [8, 5],
-                data: chartValueDeaths
-              }
-            ]
-          }
+                data: chartValueDeaths,
+              },
+            ],
+          },
         });
 
         console.log("Chart Response", resultData);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -219,7 +218,7 @@ class CovidChart extends Component {
       totalRecovered,
       newRecovered,
       totalDeaths,
-      newDeaths
+      newDeaths,
     } = this.state;
     return (
       <Card>
@@ -237,21 +236,21 @@ class CovidChart extends Component {
               <div className="callout callout-danger">
                 <small className="text-muted">Kasus Terbaru</small>
                 <br />
-                <strong className="h4">{this.state.newConfirmed}</strong>
+                <strong className="h4">+{this.state.newConfirmed}</strong>
               </div>
             </Col>
             <Col sm="2">
               <div className="callout callout-success">
                 <small className="text-muted">Sehat Terbaru</small>
                 <br />
-                <strong className="h4">{this.state.newRecovered}</strong>
+                <strong className="h4">+{this.state.newRecovered}</strong>
               </div>
             </Col>
             <Col sm="2">
               <div className="callout callout-dark">
                 <small className="text-muted">Kematian Terbaru</small>
                 <br />
-                <strong className="h4">{this.state.newDeaths}</strong>
+                <strong className="h4">+{this.state.newDeaths}</strong>
               </div>
             </Col>
             {/*<Col sm="7" className="d-none d-sm-inline-block">
@@ -300,6 +299,7 @@ class CovidChart extends Component {
             />
           </div>
         </CardBody>
+        {/*
         <CardFooter>
           <Row className="text-center">
             <Col sm={12} md className="mb-sm-2 mb-0">
@@ -333,6 +333,7 @@ class CovidChart extends Component {
             </Col>
           </Row>
         </CardFooter>
+        */}
       </Card>
     );
   }
