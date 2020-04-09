@@ -84,7 +84,7 @@ class StayAtHomeTabs extends Component {
               E-Learning
             </NavLink>
           </NavItem>
-          <NavItem>
+          {/*<NavItem>
             <NavLink
               active={this.state.activeTab[0] === "3"}
               onClick={() => {
@@ -93,7 +93,7 @@ class StayAtHomeTabs extends Component {
             >
               Webinar
             </NavLink>
-          </NavItem>
+            </NavItem>*/}
           <NavItem>
             <NavLink
               active={this.state.activeTab[0] === "4"}
@@ -111,7 +111,7 @@ class StayAtHomeTabs extends Component {
                 this.toggle(0, "5");
               }}
             >
-              Musik {" & "} Seni
+              Musik, Pilm, {" & "} lainnya
             </NavLink>
           </NavItem>
         </Nav>

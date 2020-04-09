@@ -7,17 +7,17 @@ class TableIslam extends Component {
     const dataIslam = [
       {
         id: 1,
-        provider: "Buya Yahya",
-        title: "Lawan Penyebaran COVID-19 dengan Inovasi",
+        provider: "Al-Quran Online",
+        title: "Al Quran Digital Online Terjemahan Bahasa Indonesia",
         timeChallenge: "March - 13 April 2020",
-        website: "IG: @buyayahya_albahjah",
+        website: "mushaf.id",
       },
       {
         id: 2,
-        provider: "Abdullah Gymnastiar",
-        title: "Indosat Ooredoo Digital Camp",
+        provider: "Hadits Indonesia",
+        title: "Pelajari Kumpulan Hadits Shahih",
         timeChallenge: "30 Maret - May 2020",
-        website: "IG: @aagym",
+        website: "hadits.id",
       },
       {
         id: 3,
@@ -32,8 +32,8 @@ class TableIslam extends Component {
         <thead className="thead-light">
           <tr>
             <th>Penyelenggara</th>
-            <th className="text-center">Judul</th>
-            <th>Waktu</th>
+            <th className="text-center">Deskripsi</th>
+            {/*<th>Waktu</th>*/}
             <th className="text-center">Website</th>
           </tr>
         </thead>
@@ -42,9 +42,9 @@ class TableIslam extends Component {
             <tr key={item.id}>
               <td>{item.provider}</td>
               <td className="text-center">{item.title}</td>
-              <td>
+              {/*<td>
                 <small className="text-muted">{item.timeChallenge}</small>
-              </td>
+              </td>*/}
               <td className="text-center text-muted">{item.website}</td>
             </tr>
           ))}
