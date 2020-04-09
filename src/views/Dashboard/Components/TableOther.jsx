@@ -7,14 +7,14 @@ class TableOther extends Component {
     const dataOther = [
       {
         id: 1,
-        provider: "Buya Yahya",
+        provider: "Drama Korea",
         title: "Lawan Penyebaran COVID-19 dengan Inovasi",
         timeChallenge: "March - 13 April 2020",
         website: "dicoding.com",
       },
       {
         id: 2,
-        provider: "Abdullah Gymnastiar",
+        provider: "Streaming Radio",
         title: "Indosat Ooredoo Digital Camp",
         timeChallenge: "30 Maret - May 2020",
         website: "idcamp.indosatooredoo.com",

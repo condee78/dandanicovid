@@ -10,21 +10,21 @@ class TableIslam extends Component {
         provider: "Buya Yahya",
         title: "Lawan Penyebaran COVID-19 dengan Inovasi",
         timeChallenge: "March - 13 April 2020",
-        website: "dicoding.com",
+        website: "IG: @buyayahya_albahjah",
       },
       {
         id: 2,
         provider: "Abdullah Gymnastiar",
         title: "Indosat Ooredoo Digital Camp",
         timeChallenge: "30 Maret - May 2020",
-        website: "idcamp.indosatooredoo.com",
+        website: "IG: @aagym",
       },
       {
         id: 3,
-        provider: "Abdul Somad",
+        provider: "Ustadz Abdul Somad",
         title: "Digital Talent Scholarship 2020",
         timeChallenge: "30 Maret - 13 April 2020",
-        website: "digitalent.kominfo.go.id",
+        website: "IG: @ustadzabdulsomad_official",
       },
     ];
     return (
