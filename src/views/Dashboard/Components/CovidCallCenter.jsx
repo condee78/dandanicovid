@@ -51,16 +51,13 @@ class CovidCallCenter extends Component {
 
     return (
       <div className={classes}>
-        <div
-          className={classCardHeader}
-          style={{ fontSize: "20px", fontWeight: "bolder", color: "white" }}
-        >
-          {phoneNumber}
+        <div className={classCardHeader}>
+          <h3 style={{ color: "white" }}>{phoneNumber}</h3>
         </div>
         <div className={classCardBody}>
           <div>
-            <div className="text-value" style={{ fontSize: "15px" }}>
-              {provider}
+            <div>
+              <h6>{provider}</h6>
             </div>
             <div className="text-uppercase text-muted small">{description}</div>
           </div>

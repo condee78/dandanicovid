@@ -34,7 +34,7 @@ class TableELearning extends Component {
             <th>Penyelenggara</th>
             <th className="text-center">Judul</th>
             <th>Waktu</th>
-            <th className="text-center">Website</th>
+            <th className="text-center">Kontak</th>
           </tr>
         </thead>
         <tbody>

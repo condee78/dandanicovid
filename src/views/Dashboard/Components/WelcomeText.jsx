@@ -10,9 +10,8 @@ class WelcomeText extends Component {
         <Col>
           <h1>Dandani Covid-19</h1>
           <p className="lead">
-            Dashboard Data Covid-19 Global, Indonesia dan Kota Cilegon-Serang,
-            beserta informasi penting lainnya demi mendukung program
-            #DiRumahAja.
+            Dashboard Data Covid-19 Global, Indonesia dan Kota Cilegon/Serang,
+            serta informasi lainnya demi mendukung program #DiRumahAja.
           </p>
         </Col>
       </Row>

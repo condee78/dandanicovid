@@ -6,6 +6,8 @@ import axios from "axios";
 const API_URL = "https://api.thevirustracker.com/free-api?countryTotal=ID";
 const API_URL_INDO = "https://api.kawalcorona.com/indonesia/";
 
+const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
+
 class SummaryCovidWidgetFull extends Component {
   state = {
     dataCovid: [],
@@ -46,7 +48,7 @@ class SummaryCovidWidgetFull extends Component {
           <Widget04
             icon="fa fa-plus-square fa-lg mt-4"
             color="danger"
-            header={dataCovid.total_cases}
+            header={formatNumber(dataCovid.total_cases)}
             value="25"
             invert
           >
@@ -55,7 +57,7 @@ class SummaryCovidWidgetFull extends Component {
           <Widget04
             icon="fa fa-stethoscope fa-lg mt-4"
             color="warning"
-            header={dataCovid.total_active_cases}
+            header={formatNumber(dataCovid.total_active_cases)}
             value="25"
             invert
           >
@@ -64,7 +66,7 @@ class SummaryCovidWidgetFull extends Component {
           <Widget04
             icon="fa fa-heartbeat fa-lg mt-4"
             color="success"
-            header={dataCovid.total_recovered}
+            header={formatNumber(dataCovid.total_recovered)}
             value="25"
             invert
           >
@@ -73,7 +75,7 @@ class SummaryCovidWidgetFull extends Component {
           <Widget04
             icon="fa fa-heart-o fa-lg mt-4"
             color="dark"
-            header={dataCovid.total_deaths}
+            header={formatNumber(dataCovid.total_deaths)}
             value="25"
             invert
           >

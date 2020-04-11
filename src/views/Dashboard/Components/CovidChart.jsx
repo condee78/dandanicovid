@@ -158,6 +158,8 @@ class CovidChart extends Component {
           chartValueRecovered.push(element.recovered);
         });
 
+        this.props.onLastUpdated(resultData.updatedDateTime);
+
         this.setState({
           // Store data to state
           totalConfirmed: resultData.stats.totalConfirmedCases,
@@ -203,7 +205,7 @@ class CovidChart extends Component {
           },
         });
 
-        //console.log("Chart Response", resultData);
+        console.log("Chart Response", resultData);
       })
       .catch((error) => {
         console.log(error);
@@ -241,7 +243,7 @@ class CovidChart extends Component {
             </Col>
             <Col sm="2">
               <div className="callout callout-success">
-                <small className="text-muted">Sehat Terbaru</small>
+                <small className="text-muted">Kesembuhan Terbaru</small>
                 <br />
                 <strong className="h4">+{this.state.newRecovered}</strong>
               </div>

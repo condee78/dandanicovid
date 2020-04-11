@@ -10,7 +10,7 @@ class TableChallenge extends Component {
         provider: "Dicoding",
         title: "Lawan Penyebaran COVID-19 dengan Inovasi",
         timeChallenge: "March - 13 April 2020",
-        website: "dicoding.com",
+        website: "dicoding.com/challenges/580",
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ class TableChallenge extends Component {
             <th>Penyelenggara</th>
             <th className="text-center">Judul</th>
             <th>Waktu</th>
-            <th className="text-center">Website</th>
+            <th className="text-center">Kontak</th>
           </tr>
         </thead>
         <tbody>

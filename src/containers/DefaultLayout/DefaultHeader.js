@@ -57,11 +57,11 @@ class DefaultHeader extends Component {
     </NavItem>*/}
         </Nav>
         <Nav className="ml-auto" navbar>
-          <h4>
+          {/*<h4>
             <Badge className="mr-4" color="primary">
               Update:{" "}
             </Badge>
-          </h4>
+          </h4>*/}
         </Nav>
       </React.Fragment>
     );
