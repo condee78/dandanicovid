@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { mapToCssModules } from "reactstrap/lib/utils";
@@ -20,17 +19,13 @@ const defaultProps = {
 
 class CovidCallCenter extends Component {
   render() {
-    // eslint-disable-next-line
     const {
-      children,
       className,
       cssModule,
-      dataBox,
       phoneNumber,
       provider,
       description,
       variant,
-      ...attributes
     } = this.props;
 
     if (

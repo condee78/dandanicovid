@@ -1,43 +1,32 @@
 import React, { Component } from "react";
-import {
-  Badge,
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
-  Row,
-  Table
-} from "reactstrap";
+import { Card, CardBody, CardHeader, Table } from "reactstrap";
 
 import axios from "axios";
 
 const API_URL = "https://api.kawalcorona.com/indonesia/provinsi/";
 
-const formatNumber = num => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
+const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
 
 class CovidTableProvince extends Component {
   state = {
     dataCovidProvince: [],
-    showItems: 5
+    showItems: 5,
   };
 
   componentDidMount() {
     axios
       .get(API_URL)
-      .then(res => {
+      .then((res) => {
         this.setState({
-          dataCovidProvince: res.data
+          dataCovidProvince: res.data,
         });
         //console.log("response Province", this.state.dataCovidProvince);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // handle error
         console.log(error);
       })
-      .then(function() {
+      .then(function () {
         // always executed
       });
   }

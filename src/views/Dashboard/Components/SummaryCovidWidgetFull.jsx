@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Widget04 from "../../Widgets/Widget04";
-import { CardGroup, Col, Row, Alert, CardFooter } from "reactstrap";
+import { CardGroup } from "reactstrap";
 import axios from "axios";
 
 const API_URL = "https://api.thevirustracker.com/free-api?countryTotal=ID";
-const API_URL_INDO = "https://api.kawalcorona.com/indonesia/";
 
 const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
 

@@ -1,8 +1,6 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { Component } from "react";
 
 import { Col, Row } from "reactstrap";
-
-import axios from "axios";
 
 import CovidChart from "./Components/CovidChart";
 import SummaryCovidWidgetFull from "./Components/SummaryCovidWidgetFull";
@@ -17,27 +15,9 @@ import moment from "moment";
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
-
     this.state = {
-      dropdownOpen: false,
       radioSelected: 2,
     };
-  }
-
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen,
-      dateUpdated: "",
-    });
-  }
-
-  onRadioBtnClick(radioSelected) {
-    this.setState({
-      radioSelected: radioSelected,
-    });
   }
 
   loading = () => (

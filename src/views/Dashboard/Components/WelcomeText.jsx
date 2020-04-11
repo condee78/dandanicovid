@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Jumbotron } from "reactstrap";
-import { element } from "prop-types";
+import { Col, Row } from "reactstrap";
 
 class WelcomeText extends Component {
   state = {};

@@ -3,11 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Nav, NavItem } from "reactstrap";
 import PropTypes from "prop-types";
 
-import {
-  AppAsideToggler,
-  AppNavbarBrand,
-  AppSidebarToggler,
-} from "@coreui/react";
+import { AppNavbarBrand } from "@coreui/react";
 import logo from "../../assets/img/brand/logo.svg";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 
@@ -24,7 +20,6 @@ class DefaultHeader extends Component {
 
     return (
       <React.Fragment>
-        <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
           full={{
             src: logo,

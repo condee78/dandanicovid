@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { Col, Row } from "reactstrap";
+import { Row } from "reactstrap";
 
 const propTypes = {
   children: PropTypes.node,
@@ -21,7 +21,9 @@ class DefaultFooter extends Component {
             <p className="text-center mb-0">
               <a href="#">DandaniCovid19</a> &copy; 2020 Made with ❤ by
               Fazriaziz. Powered by{" "}
-              <a href="https://coreui.io/react">CoreUI for React</a>
+              <a href="https://coreui.io/react" target="_blank">
+                CoreUI for React
+              </a>
             </p>
           </span>
         </Row>

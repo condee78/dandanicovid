@@ -6,8 +6,6 @@ import {
   CarouselItem,
   CarouselCaption,
 } from "reactstrap";
-import StayAtHomeTabs from "./StayAtHomeTabs";
-import StayAtHomeProgram from "./StayAtHomeProgram";
 
 import image1 from "../../../assets/img/lawan_covid_dengan_inovasi.jpg";
 import image3 from "../../../assets/img/idcamp_scholarship.jpg";

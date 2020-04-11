@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { Table, Card, CardBody, CardHeader, Progress } from "reactstrap";
+import { Card, CardBody, CardHeader } from "reactstrap";
 import CustomTable from "./CustomTable";
-
-import { Input } from "antd";
 import axios from "axios";
 
 const API_URL =
   "https://services8.arcgis.com/xkIJYiP5RSJttiLG/arcgis/rest/services/RS%20Rujukan%20Penanganan%20COVID19/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json";
-
-const { Search } = Input;
 
 class CovidTableHospitals extends Component {
   state = {

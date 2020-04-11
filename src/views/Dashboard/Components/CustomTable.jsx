@@ -1,7 +1,5 @@
 import React from "react";
-import { Table, Tag } from "antd";
-
-const order = (a, b) => parseInt(a) - parseInt(b);
+import { Table } from "antd";
 
 const customSorter = (a, b) =>
   isNaN(a) && isNaN(b) ? (a || "").localeCompare(b || "") : a - b;

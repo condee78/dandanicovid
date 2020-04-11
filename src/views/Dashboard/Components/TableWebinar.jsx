@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table, Card, CardBody, CardHeader, Progress } from "reactstrap";
+import { Table } from "reactstrap";
 
 class TableWebinar extends Component {
   state = {};
