@@ -13,7 +13,7 @@ import {
   AppSidebarHeader,
   AppSidebarMinimizer,
   AppBreadcrumb2 as AppBreadcrumb,
-  AppSidebarNav2 as AppSidebarNav
+  AppSidebarNav2 as AppSidebarNav,
 } from "@coreui/react";
 // sidebar nav config
 import navigation from "../../_nav";
@@ -39,21 +39,23 @@ class DefaultLayout extends Component {
       <div className="app">
         <AppHeader fixed>
           <Suspense fallback={this.loading()}>
-            <DefaultHeader onLogout={e => this.signOut(e)} />
+            <DefaultHeader onLogout={(e) => this.signOut(e)} />
           </Suspense>
         </AppHeader>
         <div className="app-body">
-          {/*}
           <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-            <AppSidebarNav navConfig={navigation} {...this.props} router={router}/>
+              <AppSidebarNav
+                navConfig={navigation}
+                {...this.props}
+                router={router}
+              />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
-    */}
           <main className="main">
             <AppBreadcrumb appRoutes={routes} router={router} />
             <Container fluid>
@@ -66,11 +68,12 @@ class DefaultLayout extends Component {
                         path={route.path}
                         exact={route.exact}
                         name={route.name}
-                        render={props => <route.component {...props} />}
+                        render={(props) => <route.component {...props} />}
                       />
                     ) : null;
                   })}
                   <Redirect from="/" to="/dashboard" />
+                  <Redirect from="/about" to="/About" />
                 </Switch>
               </Suspense>
             </Container>

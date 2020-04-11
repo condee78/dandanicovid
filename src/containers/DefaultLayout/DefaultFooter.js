@@ -23,12 +23,6 @@ class DefaultFooter extends Component {
               Fazriaziz. Powered by{" "}
               <a href="https://coreui.io/react">CoreUI for React</a>
             </p>
-            <p>
-              <em>
-                Data berasal dari worldometers, WHO, J John Hopkins University
-                CSSE, dan Organisasi terkemuka di Dunia.
-              </em>
-            </p>
           </span>
         </Row>
       </React.Fragment>

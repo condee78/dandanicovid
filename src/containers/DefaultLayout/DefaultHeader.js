@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  Badge,
-  UncontrolledDropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Nav,
-  NavItem,
-} from "reactstrap";
+import { Nav, NavItem } from "reactstrap";
 import PropTypes from "prop-types";
 
 import {
@@ -34,10 +26,19 @@ class DefaultHeader extends Component {
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: "CoreUI Logo" }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: "CoreUI Logo" }}
+          full={{
+            src: logo,
+            width: 89,
+            height: 25,
+            alt: "DandaniCovid19 Logo",
+          }}
+          minimized={{
+            src: sygnet,
+            width: 30,
+            height: 30,
+            alt: "DandaniCovid19 Logo",
+          }}
         />
-        <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
@@ -45,24 +46,13 @@ class DefaultHeader extends Component {
               Dashboard
             </NavLink>
           </NavItem>
-          {/*<NavItem className="px-3">
-            <Link to="/users" className="nav-link">
-              Users
+          <NavItem className="px-3">
+            <Link to="/about" className="nav-link">
+              Tentang Kami
             </Link>
           </NavItem>
-          <NavItem className="px-3">
-            <NavLink to="#" className="nav-link">
-              Settings
-            </NavLink>
-    </NavItem>*/}
         </Nav>
-        <Nav className="ml-auto" navbar>
-          {/*<h4>
-            <Badge className="mr-4" color="primary">
-              Update:{" "}
-            </Badge>
-          </h4>*/}
-        </Nav>
+        <Nav className="ml-auto" navbar></Nav>
       </React.Fragment>
     );
   }
