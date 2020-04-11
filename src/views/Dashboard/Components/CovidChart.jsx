@@ -149,7 +149,7 @@ class CovidChart extends Component {
           },
         });
 
-        console.log("Chart Response", resultData);
+        //console.log("Chart Response", resultData);
       })
       .catch((error) => {
         console.log(error);
