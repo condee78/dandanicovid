@@ -48,10 +48,10 @@ class Dashboard extends Component {
         <StayAtHomeProgram />
         <Row>
           <Col xs="12" lg="6">
-            <CovidTableGlobal />
+            <CovidTableGlobal showItems="5" />
           </Col>
           <Col xs="12" lg="6">
-            <CovidTableProvince />
+            <CovidTableProvince showItems="5" />
           </Col>
         </Row>
 

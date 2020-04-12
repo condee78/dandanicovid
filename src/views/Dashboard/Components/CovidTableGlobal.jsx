@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader, Table } from "reactstrap";
+import PropTypes from "prop-types";
 
 import axios from "axios";
+
+const propTypes = {
+  showItems: PropTypes.number,
+};
 
 const API_URL = "https://api.kawalcorona.com/";
 
@@ -10,7 +15,6 @@ const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
 class CovidTableGlobal extends Component {
   state = {
     dataCovidGlobal: [],
-    showItems: 5,
   };
 
   componentDidMount() {
@@ -31,7 +35,12 @@ class CovidTableGlobal extends Component {
       });
   }
   render() {
-    const { dataCovidGlobal, showItems } = this.state;
+    const { dataCovidGlobal } = this.state;
+    let { showItems } = this.props;
+
+    if (showItems === null || showItems === undefined) {
+      showItems = 6;
+    }
     return (
       <Card>
         <CardHeader>
@@ -73,5 +82,7 @@ class CovidTableGlobal extends Component {
     );
   }
 }
+
+CovidTableGlobal.propTypes = propTypes;
 
 export default CovidTableGlobal;

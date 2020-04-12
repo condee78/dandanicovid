@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader, Table } from "reactstrap";
+import PropTypes from "prop-types";
 
 import axios from "axios";
+
+const propTypes = {
+  showItems: PropTypes.number,
+};
 
 const API_URL = "https://api.kawalcorona.com/indonesia/provinsi/";
 
@@ -10,7 +15,6 @@ const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, "$1,");
 class CovidTableProvince extends Component {
   state = {
     dataCovidProvince: [],
-    showItems: 5,
   };
 
   componentDidMount() {
@@ -31,7 +35,12 @@ class CovidTableProvince extends Component {
       });
   }
   render() {
-    const { dataCovidProvince, showItems } = this.state;
+    const { dataCovidProvince } = this.state;
+    let { showItems } = this.props;
+
+    if (showItems === null || showItems === undefined) {
+      showItems = 6;
+    }
     return (
       <Card>
         <CardHeader>
@@ -73,5 +82,7 @@ class CovidTableProvince extends Component {
     );
   }
 }
+
+CovidTableProvince.propTypes = propTypes;
 
 export default CovidTableProvince;
