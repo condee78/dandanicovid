@@ -39,7 +39,7 @@ class CovidTableProvince extends Component {
     let { showItems } = this.props;
 
     if (showItems === null || showItems === undefined) {
-      showItems = 6;
+      showItems = 100;
     }
     return (
       <Card>
