@@ -31,7 +31,7 @@ class StayAtHomeProgram extends Component {
         </CardBody>
         <CardFooter>
           <Row>
-            <Col sm={6}>
+            <Col sm={12}>
               <h2>
                 Yuuk.. Ikutan jadi <Badge color="danger">Subscriber!</Badge>
               </h2>
@@ -41,11 +41,11 @@ class StayAtHomeProgram extends Component {
                 <SubscriberForm />
               </div>
             </Col>
-            <Col sm={6}>
+            {/*<Col sm={6}>
               <div className="float-right">
                 <Link to="/fullStayAtHome">Lihat Program Menarik Lainnya!</Link>
               </div>
-            </Col>
+              </Col>*/}
           </Row>
         </CardFooter>
       </Card>

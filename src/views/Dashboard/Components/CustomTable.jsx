@@ -25,7 +25,7 @@ const CustomTable = ({ dataSource }) => {
       sorter: (a, b) => customSorter(a.hospitalName, b.hospitalName),
     },
     {
-      title: "Provinse",
+      title: "Provinsi",
       dataIndex: "province",
       key: "province",
       sorter: (a, b) => customSorter(a.province, b.province),
