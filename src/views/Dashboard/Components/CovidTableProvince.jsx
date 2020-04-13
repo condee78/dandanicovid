@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardHeader, Table } from "reactstrap";
+import { Card, CardBody, CardHeader, Table, CardFooter } from "reactstrap";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import axios from "axios";
@@ -41,12 +42,28 @@ class CovidTableProvince extends Component {
     if (showItems === null || showItems === undefined) {
       showItems = 100;
     }
+
+    const displayFooter =
+      showItems > 5 ? (
+        <CardFooter className="text-center">
+          <Link to="/dasboard">Back</Link>
+        </CardFooter>
+      ) : (
+        <CardFooter className="text-center">
+          <Link to="/fullprovince">Lihat Semua Provinsi</Link>
+        </CardFooter>
+      );
+
+    const displayTitle =
+      showItems > 5
+        ? "Provinsi Indonesia Terjangkit Covid-19"
+        : "Peringkat 5 Teratas dari " +
+          dataCovidProvince.length +
+          " Provinsi Terjangkit Covid-19";
+
     return (
       <Card>
-        <CardHeader>
-          Peringkat 5 Teratas dari {dataCovidProvince.length} Provinsi
-          Terjangkit Covid-19
-        </CardHeader>
+        <CardHeader>{displayTitle}</CardHeader>
         <CardBody>
           <Table responsive>
             <thead>
@@ -78,6 +95,7 @@ class CovidTableProvince extends Component {
             </tbody>
           </Table>
         </CardBody>
+        {displayFooter}
       </Card>
     );
   }
