@@ -19,6 +19,11 @@ const routes = [
     name: "Negara (Global)",
     component: FullGlobal,
   },
+  {
+    path: "/fullStayAtHome",
+    name: "dashboard",
+    component: Dashboard,
+  },
 ];
 
 export default routes;

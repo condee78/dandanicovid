@@ -1,7 +1,17 @@
 import React, { Component } from "react";
-import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
+import {
+  Row,
+  Col,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Badge,
+} from "reactstrap";
+import { Link } from "react-router-dom";
 import StayAtHomeCarousels from "./StayAtHomeCarousels";
 import StayAtHomeTabs from "./StayAtHomeTabs";
+import SubscriberForm from "./SubscriberForm";
 
 class StayAtHomeProgram extends Component {
   state = {};
@@ -19,6 +29,25 @@ class StayAtHomeProgram extends Component {
             </Col>
           </Row>
         </CardBody>
+        <CardFooter>
+          <Row>
+            <Col sm={6}>
+              <h2>
+                Yuuk.. Ikutan jadi <Badge color="danger">Subscriber!</Badge>
+              </h2>
+              Biar kamu tetap dapat update Event #DiRumahAja dan perkembangan
+              Covid-19
+              <div className="align-middle">
+                <SubscriberForm />
+              </div>
+            </Col>
+            <Col sm={6}>
+              <div className="float-right">
+                <Link to="/fullStayAtHome">Lihat Program Menarik Lainnya!</Link>
+              </div>
+            </Col>
+          </Row>
+        </CardFooter>
       </Card>
     );
   }

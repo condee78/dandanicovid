@@ -16,20 +16,26 @@ class About extends Component {
                   Dandani Covid19 merupakan sebuah Web berbentuk Dashboard yang
                   menampilkan data penyebaran Pandemi Virus Corona secara Global
                   dan Indonesia umumnya, dan Kota Cilegon/Serang pada khususnya.
-                  Dashboard juga menyediakan informasi atau acara agar orang
-                  betah #DiRumahAja.
+                  Dashboard juga menyediakan informasi/acara sebagai referensi
+                  agar orang betah #DiRumahAja.
                 </p>
+                <h6>Web App Development</h6>
                 <p>
-                  Web App Dashboard di-develop menggunakan Reactjs dengan CoreUI
-                  sebagai User Interface. Memanfaatkan Hosting (Free) dari
-                  Netlify.com).
+                  Web App mempunyai nama "Dandani" yang berasal dari bahasa jawa
+                  dengan arti "Memperbaiki", dengan harapan agar
+                  Indonesia/Global bisa memperbaiki semua efek dari Virus
+                  Corona. Dashboard dikembangkan menggunakan Reactjs dengan
+                  CoreUI sebagai User Interface, dan memanfaatkan Hosting (Free)
+                  dari Netlify.com.
                 </p>
+                <h6>Saling Berbagi</h6>
                 <p>
                   Dashboard ini dibuat untuk berbagi data dan informasi tentang
                   Virus Corona, bukan untuk Komersil atau Diperjual-Belikan.
                   Segala data, informasi, atau gambar berasal dari Third-party
                   (API, Organisasi, Akun Media Social, dsb).
                 </p>
+                <h6>Thanks</h6>
                 <p>
                   Terima kasih atas segala pihak yang tidak dapat disebutkan
                   satu-persatu yang telah berkontribusi membantu pembuatan
@@ -52,9 +58,12 @@ class About extends Component {
                   Referensi Open/Public API (Application Programming Interface).
                   Berikut ini detil Source Data API:
                 </p>
-                <h6>The Virus Tracker</h6>
+                <h6>Corona Virus Data API</h6>
                 <p>
-                  API digunakan untuk mendapatkan data penyebaran Covid-19 di
+                  <a href="https://documenter.getpostman.com/view/8854915/SzS7R74n?version=latest">
+                    API
+                  </a>{" "}
+                  digunakan untuk mendapatkan data penyebaran Covid-19 di
                   Indonesia. Menampilkan peringkat Indonesia di Dunia, banyaknya
                   orang yang terjangkit, dalam perawatan, sembuh, dan meninggal.
                 </p>

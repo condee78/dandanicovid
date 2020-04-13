@@ -16,17 +16,13 @@ class DefaultFooter extends Component {
 
     return (
       <React.Fragment>
-        <Row>
-          <span>
-            <p className="text-center mb-0">
-              <a href="#">DandaniCovid19</a> &copy; 2020 Made with ❤ by
-              Fazriaziz. Powered by{" "}
-              <a href="https://coreui.io/react" target="_blank">
-                CoreUI for React
-              </a>
-            </p>
-          </span>
-        </Row>
+        <div className="text-center">
+          <a href="#">DandaniCovid19</a> &copy; 2020 Made with ❤ by Fazriaziz.
+          Powered by{" "}
+          <a href="https://coreui.io/react" target="_blank">
+            CoreUI for React
+          </a>
+        </div>
       </React.Fragment>
     );
   }

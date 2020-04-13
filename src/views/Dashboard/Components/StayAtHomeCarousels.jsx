@@ -10,6 +10,7 @@ import {
 import image1 from "../../../assets/img/lawan_covid_dengan_inovasi.jpg";
 import image3 from "../../../assets/img/idcamp_scholarship.jpg";
 import image2 from "../../../assets/img/doa_melawan_covid.jpg";
+import image4 from "../../../assets/img/MotoGPVirtualRace.jpeg";
 
 const items = [
   {
@@ -25,6 +26,11 @@ const items = [
   {
     src: image3,
     altText: "IDCamp Scholarship",
+    caption: "",
+  },
+  {
+    src: image4,
+    altText: "MotoGP Virtual Race",
     caption: "",
   },
 ];

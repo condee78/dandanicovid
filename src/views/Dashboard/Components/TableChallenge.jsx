@@ -21,10 +21,10 @@ class TableChallenge extends Component {
       },
       {
         id: 3,
-        provider: "KOMINFO",
-        title: "Digital Talent Scholarship 2020",
-        timeChallenge: "30 Maret - 13 April 2020",
-        website: "digitalent.kominfo.go.id",
+        provider: "MotoGP",
+        title: "MotoGP Virtual Race",
+        timeChallenge: "12 April 2020",
+        website: "motogp.com",
       },
     ];
     return (
